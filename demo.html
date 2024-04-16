@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Simulator</title>
+    <style>
+        .device {
+            width: 50px;
+            height: 50px;
+            background-color: #ccc;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        #canvas {
+            width: 400px;
+            height: 400px;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="toolbox">
+        <div class="device" draggable="true" id="pc" ondragstart="drag(event)">
+            PC
+        </div>
+        <!-- Add more devices as needed -->
+    </div>
+    <div id="canvas" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <!-- Placeholder for dynamically created devices -->
+    </div>
+
+    <script >
+        function allowDrop(event) {
+    event.preventDefault();
+}
+
+function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+}
+
+function drop(event) {
+    event.preventDefault();
+    const data = event.dataTransfer.getData("text");
+    const x = event.clientX - event.target.getBoundingClientRect().left;
+    const y = event.clientY - event.target.getBoundingClientRect().top;
+
+    if (data === 'pc') {
+        const pc = document.createElement('div');
+        pc.innerText = 'PC';
+        pc.className = 'device';
+        pc.style.position = 'absolute';
+        pc.style.left = x + 'px';
+        pc.style.top = y + 'px';
+        document.getElementById('canvas').appendChild(pc);
+    }
+}
+
+    </script>
+</body>
+</html>
