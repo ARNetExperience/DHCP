@@ -1,18 +1,43 @@
+.console {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-family: monospace;
+  background-color: #000;
+  color: #fff;
+  width: 100%;
 
-
-
-
-.model-viewer-container {
- 
-  width: 30%;
-  
-  margin: 0px;
-  
+  margin: auto;
 }
 
-#documentation , #video{
+.input {
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 5px;
+}
+
+
+
+.output {
+  min-height: 500px;
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+}
+
+.model-viewer-container {
+
+  width: 30%;
+
+  margin: 0px;
+
+}
+
+#documentation,
+#video {
   padding: 10px 6px;
-  
+
 }
 
 
@@ -171,9 +196,9 @@ body {
 /* Style the <model-viewer> elements */
 model-viewer {
   width: 50%;
- 
+
   height: 300px;
-  
+
   margin: auto;
 }
 
