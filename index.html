@@ -125,27 +125,149 @@
 
 
 
-
-
-
-        /* Define animation */
-        @keyframes colorChange {
+        @keyframes PC1toRouter {
             0% {
-                color: #64005a;
+                transform: translateY(0) translateX(0);
+            }
+
+            12.5% {
+                transform: translateY(-100%) translateX(0%);
+            }
+
+            25% {
+                transform: translateY(-90%) translateX(700%);
+            }
+
+            37.5% {
+                transform: translateY(-100%) translateX(0%);
             }
 
             50% {
-                color: #ff00e6;
+                transform: translateY(0) translateX(0);
             }
 
-            100% {
-                color: #64005a;
-            }
+
+
+
+
+
+
         }
 
-        /* Apply animation to the span */
-        h1 span:hover {
-            animation: colorChange 5s infinite;
+
+
+        #PC1toRouter {
+            animation: PC1toRouter 20s ease-in-out 2 forwards;
+        }
+
+
+
+        @keyframes PC2toRouter {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+
+            12.5% {
+                transform: translateY(-100%) translateX(-400%);
+            }
+
+            25% {
+                transform: translateY(-90%) translateX(300%);
+            }
+
+            37.5% {
+                transform: translateY(-100%) translateX(-400%);
+            }
+
+            50% {
+                transform: translateY(0) translateX(0);
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+        #PC2toRouter {
+            animation: PC2toRouter 20s ease-in-out 2 forwards;
+        }
+
+
+        @keyframes PC3toRouter {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+
+            12.5% {
+                transform: translateY(-100%) translateX(400%);
+            }
+
+            25% {
+                transform: translateY(-90%) translateX(-300%);
+            }
+
+            37.5% {
+                transform: translateY(-100%) translateX(400%);
+            }
+
+            50% {
+                transform: translateY(0) translateX(0);
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+        #PC3toRouter {
+            animation: PC3toRouter 20s ease-in-out 2 forwards;
+        }
+
+
+
+        @keyframes PC4toRouter {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+
+            12.5% {
+                transform: translateY(-100%) translateX(0%);
+            }
+
+            25% {
+                transform: translateY(-90%) translateX(-700%);
+            }
+
+            37.5% {
+                transform: translateY(-100%) translateX(0%);
+            }
+
+            50% {
+                transform: translateY(0) translateX(0);
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+        #PC4toRouter {
+            animation: PC4toRouter 20s ease-in-out 2 forwards;
         }
     </style>
 
@@ -507,25 +629,25 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="switch" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">WS-C3650-48PS-S Cisco Catalyst 3650 Network Switch</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body ">
-                        <center><img src="switch.jpg" width="50%" ></center>
+            <div class="modal fade" id="switch" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5 text-black" id="exampleModalLabel">WS-C3650-48PS-S Cisco
+                                Catalyst 3650 Network Switch</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body ">
+                            <center><img src="switch.jpg" width="50%"></center>
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Okay</button>
-                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Okay</button>
+                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
 
@@ -538,7 +660,8 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">D-Link dir-806in Wireless Router</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">D-Link dir-806in
+                                Wireless Router</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body" style="color: #000000;">
@@ -600,7 +723,7 @@
                                 id="PC1IPAdressCloseBtn"></button>
                         </div>
                         <div class="modal-body" style="color: #000000;">
-                            <center><img src="PC.PNG" width="50%" ></center><br>
+                            <center><img src="PC.PNG" width="50%"></center><br>
                             <label for="PC1StaticAddress">Enter Static IP Address OR Click&ensp;</label>
                             <button class="btn btn-outline-danger btn-sm"
                                 onclick="assignDHCPIPAddressPC1()">DHCP</button>&ensp;to assign Dynamic IP
@@ -636,7 +759,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body" style="color: #000000;">
-                            <center><img src="laptop.jpg" width="40%" ></center><br>
+                            <center><img src="laptop.jpg" width="40%"></center><br>
                             <label for="Laptop1StaticAddress">Enter Static IP Address OR Click&ensp;</label>
                             <button class="btn btn-outline-success btn-sm"
                                 onclick="assignDHCPIPAddressLaptop1()">DHCP</button>&ensp;to assign Dynamic IP
@@ -673,7 +796,7 @@
                                 id="PC2IPAdressCloseBtn"></button>
                         </div>
                         <div class="modal-body" style="color: #000000;">
-                            <center><img src="PC.PNG" width="50%" ></center><br>
+                            <center><img src="PC.PNG" width="50%"></center><br>
                             <label for="PC2StaticAddress">Enter Static IP Address OR Click&ensp;</label>
                             <button class="btn btn-outline-primary btn-sm"
                                 onclick="assignDHCPIPAddressPC2()">DHCP</button>&ensp;to assign Dynamic IP
@@ -706,11 +829,11 @@
                             <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Windows OS
                                 Laptop-2
                             </h1>
-                           
+
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body" style="color: #000000;">
-                            <center><img src="laptop.jpg" alt="cross over copper cable" width="40%" ></center><br>
+                            <center><img src="laptop.jpg" alt="cross over copper cable" width="40%"></center><br>
                             <label for="Laptop1StaticAddress">Enter Static IP Address OR Click&ensp;</label>
                             <button class="btn btn-outline-info btn-sm"
                                 onclick="assignDHCPIPAddressLaptop2()">DHCP</button>&ensp;to assign Dynamic IP
@@ -723,13 +846,13 @@
 
                             </div>
                             <span class="text-info" id="copyLaptopTextMessage2"></span>
-                           
-                            
+
+
                         </div>
                         <div class="modal-footer">
                             <!-- <button type="button" class="btn btn-dark" data-bs-toggle="modal"
                                 data-bs-target="#PC2CMD">Open Command Prompt</button> -->
-                               
+
                             <button type="button" class="btn btn-outline-secondary"
                                 data-bs-dismiss="modal">Close</button>
 
@@ -848,21 +971,22 @@
             </div>
 
 
-          
+
 
             <div class="modal fade" id="FastEthernet" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Fast Ethernet Cable
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Fast Ethernet
+                                Cable
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             <center>
-                            <img src="fastethernet.jpg" alt="cross over copper cable" width="40%" >
-                        </center> 
+                                <img src="fastethernet.jpg" alt="cross over copper cable" width="40%">
+                            </center>
 
                         </div>
                         <div class="modal-footer">
@@ -878,7 +1002,8 @@
                 <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Gigabit Ethernet Cable
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">Gigabit Ethernet
+                                Cable
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
@@ -896,15 +1021,76 @@
                 </div>
             </div>
 
-            
 
 
 
 
 
+
+            <div class="model-viewer-container">
+
+                <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+                    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="PC1toRouter"
+                    style="width: 5%;z-index: 3;margin-top: -20%;margin-left: 11%;display: none;position: absolute; ">
+                    <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
+                        data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+                        data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
+                        data-bs-toggle="modal" data-bs-target="#PC1toRouter">
+                        <div class="HotspotAnnotation">Packet</div>
+                    </button>
+                </model-viewer>
+
+            </div>
+
+            <div class="model-viewer-container">
+
+                <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+                    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="PC2toRouter"
+                    style="width: 5%;z-index: 3;margin-top: -20%;margin-left: 35%;display: none;position: absolute; ">
+                    <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
+                        data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+                        data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
+                        data-bs-toggle="modal" data-bs-target="#model1toPC2">
+                        <div class="HotspotAnnotation">Packet</div>
+                    </button>
+                </model-viewer>
+
+            </div>
+
+            <div class="model-viewer-container">
+
+                <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+                    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="PC3toRouter"
+                    style="width: 5%;z-index: 3;margin-top: -20%;margin-left: 60%;display: none;position: absolute; ">
+                    <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
+                        data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+                        data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
+                        data-bs-toggle="modal" data-bs-target="#model1toPC2">
+                        <div class="HotspotAnnotation">Packet</div>
+                    </button>
+                </model-viewer>
+
+            </div>
+
+            <div class="model-viewer-container">
+
+                <model-viewer src="packet send.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+                    tone-mapping="commerce" poster="poster.webp" shadow-intensity="1" id="PC4toRouter"
+                    style="width: 5%;z-index: 3;margin-top: -20%;margin-left: 84%;display: none;position: absolute; ">
+                    <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
+                        data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
+                        data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
+                        data-bs-toggle="modal" data-bs-target="#model1toPC2">
+                        <div class="HotspotAnnotation">Packet</div>
+                    </button>
+                </model-viewer>
+
+            </div>
 
 
         </div>
+
+
 
         <footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
             <div class="container">
@@ -923,11 +1109,11 @@
                         <h4>Links</h4>
                         <ul class="fh5co-footer-links">
                             <li><a href="https://arnetexperience.github.io/light_theme/index.html">Home</a></li>
-							<li><a href="https://arnetexperience.github.io/light_theme/#fh5co-about">About</a></li>
-							<li><a href="https://arnetexperience.github.io/light_theme/learning.html">Start
-									Learning</a></li>
-							<li><a href="https://arnetexperience.github.io/light_theme/contact.html">Contact</a>
-							</li>
+                            <li><a href="https://arnetexperience.github.io/light_theme/#fh5co-about">About</a></li>
+                            <li><a href="https://arnetexperience.github.io/light_theme/learning.html">Start
+                                    Learning</a></li>
+                            <li><a href="https://arnetexperience.github.io/light_theme/contact.html">Contact</a>
+                            </li>
                         </ul>
                     </div>
 
@@ -1228,6 +1414,10 @@
             var Laptop1IPAddress = '';
             var PC2IPAddress = '';
             var Laptop2IPAddress = '';
+            var PC1 = 0;
+            var PC2 = 0;
+            var lap1 = 0;
+            var lap2 = 0;
 
             function savePC1IPAddress() {
                 if (currentState1 < 8) {
@@ -1260,6 +1450,21 @@
                     return;
                 }
 
+                if (PC1 > 0) {
+                    alert("Close the window to see how packet flow when you request a dynamic IP Address from PC1 to Router.");
+                    var modelViewer = document.getElementById('PC1toRouter');
+                    modelViewer.style.animation = 'PC1toRouter 20s ease-in-out 2 forwards;';
+                    modelViewer.style.display = 'block';
+
+                    // When the animation ends, hide the model-viewer element
+                    modelViewer.addEventListener('animationend', function () {
+                        alert('This is how a DHCP Protocol works when you request dynamic IP Address from PC1 to Router.');
+
+                        modelViewer.style.display = 'none';
+                    });
+                    //add animation here 
+                }
+
                 // If the IP address format is valid and not assigned to Laptop 1, proceed with saving the IP address for PC1
                 console.log("Valid IP Address for PC1:", ipAddressInput);
                 var copyTextMessage1 = document.getElementById("copyTextMessage1");
@@ -1269,6 +1474,9 @@
                 }, 2000); // Clear the message after 2 seconds
 
                 PC1IPAddress = ipAddressInput;
+
+
+               
             }
 
             function saveLaptop1IPAddress() {
@@ -1301,6 +1509,21 @@
                 }
 
 
+                if (lap1 > 0) {
+                    alert("Close the window to see how packet flow when you request a dynamic IP Address from Laptop 1 to Router.");
+                    var modelViewer = document.getElementById('PC2toRouter');
+                    modelViewer.style.animation = 'PC2toRouter 20s ease-in-out 2 forwards;';
+                    modelViewer.style.display = 'block';
+
+                    // When the animation ends, hide the model-viewer element
+                    modelViewer.addEventListener('animationend', function () {
+                        alert('This is how a DHCP Protocol works when you request dynamic IP Address from Laptop 1 to Router.');
+
+                        modelViewer.style.display = 'none';
+                    });
+                }
+                //add animation here 
+
 
                 // If the IP address format is valid and not assigned to PC1, proceed with saving the IP address for Laptop 1
                 console.log("Valid IP Address for Laptop 1:", ipLapAddressInput1);
@@ -1311,6 +1534,7 @@
                 }, 2000); // Clear the message after 2 seconds
 
                 Laptop1IPAddress = ipLapAddressInput1;
+                
             }
 
             function savePC2IPAddress() {
@@ -1341,6 +1565,22 @@
                     return;
                 }
 
+                if (PC2 > 0) {
+
+                    alert("Close the window to see how packet flow when you request a dynamic IP Address from PC2 to Router.");
+                    var modelViewer = document.getElementById('PC3toRouter');
+                    modelViewer.style.animation = 'PC3toRouter 20s ease-in-out 2 forwards;';
+                    modelViewer.style.display = 'block';
+
+                    // When the animation ends, hide the model-viewer element
+                    modelViewer.addEventListener('animationend', function () {
+                        alert('This is how a DHCP Protocol works when you request dynamic IP Address from PC2 to Router.');
+
+                        modelViewer.style.display = 'none';
+                    });
+                }
+                //add animation here 
+
 
                 var copyTextMessage2 = document.getElementById("copyTextMessage2");
                 copyTextMessage2.textContent = " IP Address Saved!";
@@ -1349,6 +1589,8 @@
                 }, 2000); // Clear the message after 2 seconds
 
                 PC2IPAddress = ipAddressInput2;
+
+
             }
 
             function saveLaptop2IPAddress() {
@@ -1380,6 +1622,20 @@
                     return;
                 }
 
+                if (lap2 > 0) {
+                    alert("Close the window to see how packet flow when you request a dynamic IP Address from Laptop 2 to Router.");
+                    var modelViewer = document.getElementById('PC4toRouter');
+                    modelViewer.style.animation = 'PC4toRouter 20s ease-in-out 2 forwards;';
+                    modelViewer.style.display = 'block';
+
+                    // When the animation ends, hide the model-viewer element
+                    modelViewer.addEventListener('animationend', function () {
+                        alert('This is how a DHCP Protocol works when you request dynamic IP Address from Laptop 2 to Router.');
+
+                        modelViewer.style.display = 'none';
+                    });
+                    //add animation here 
+                }
 
 
                 var copyLaptopTextMessage2 = document.getElementById("copyLaptopTextMessage2");
@@ -1389,6 +1645,9 @@
                 }, 2000); // Clear the message after 2 seconds
 
                 Laptop2IPAddress = ipLapAddressInput3;
+
+
+
             }
 
 
@@ -1411,6 +1670,8 @@
 
                     // Setting the input field value with the assigned IP address and subnet mask
                     document.getElementById("PC1StaticAddress").value = ipAddress + " ";
+
+                    PC1++;
                 }
             }
 
@@ -1427,6 +1688,9 @@
 
                     // Setting the input field value with the assigned IP address and subnet mask
                     document.getElementById("Laptop1StaticAddress").value = ipAddress + " ";
+
+                    lap1++;
+
                 }
             }
 
@@ -1445,6 +1709,8 @@
                     // Setting the input field value with the assigned IP address and subnet mask
                     document.getElementById("PC2StaticAddress").value = ipAddress + " ";
 
+                    PC2++;
+
                 }
             }
 
@@ -1461,6 +1727,11 @@
 
                     // Setting the input field value with the assigned IP address and subnet mask
                     document.getElementById("Laptop2StaticAddress").value = ipAddress + " ";
+
+
+                    lap2++;
+
+
                 }
             }
 
