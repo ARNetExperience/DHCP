@@ -666,13 +666,12 @@
                         </div>
                         <div class="modal-body" style="color: #000000;">
                             <!-- IP Address > 198.123.1.1<br> -->
-                            Click on below button to open Router Command Line Interface (CLI) <br>
+
 
                             <img src="2.png" width="100%" height="100%">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                                data-bs-target="#OpenRouter1CLIModal">Opne CLI</button>
+
                             <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
                             <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                         </div>
@@ -703,6 +702,9 @@
 
                         </div>
                         <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" onclick="AutoAddRouterCmds()"
+                                id="routerAutoCmdBtn">Auto Execute
+                                Commands</button>
                             <button type="button" class="btn btn-primary" onclick="Router1CommandListFile()">Command
                                 Reference</button>
                             <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
@@ -939,8 +941,12 @@
                         <div class="modal-body text-black">
                             Connect modem or transceiver to link home network to internet.
                             <img src="6.png" width="100%" height="100%">
+
+                            Click on below button to open Router Command Line Interface (CLI) <br>
                         </div>
                         <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                data-bs-target="#OpenRouter1CLIModal">Opne CLI</button>
                             <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
                             <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                         </div>
@@ -1169,8 +1175,9 @@
 
         <script>
             var currentState1 = 0;
-            var poolName2 = '';
-            var poolName1 = '';
+            var poolName2 = 'My_Pool_1';
+            var poolName1 = 'My_Pool_2';
+
 
             function executeCommand1() {
 
@@ -1247,7 +1254,7 @@
 
                     case 4:
                         if (input1 !== 'exit') {
-                            outputDiv1.innerHTML += '<p>>Router (config-router) #Invalid command. Please enter "neighbor 198.123.3.2 remote-as 200".</p>';
+                            outputDiv1.innerHTML += '<p>>Router (config-router) #Invalid command. Please enter "exit".</p>';
                             return;
                         }
 
@@ -1310,6 +1317,9 @@
 
                         alert("'exit' is a command used to exit or close the current interface, configuration mode, or session in various command-line interfaces or programs, allowing the user to return to a previous menu or prompt.\n\n");
 
+                        document.getElementById("routerAutoCmdBtn").disabled = true;
+
+                        // console.log(currentState1);
                         break;
 
                     // default:
@@ -1337,7 +1347,46 @@
             }
 
 
+            function AutoAddRouterCmds() {
+                document.getElementById("routerAutoCmdBtn").disabled = true;
 
+                if (currentState1 > 0) {
+                    if (currentState1 > 0 && currentState1 < 8) {
+                        alert('Already Configuration for Router is in process.');
+                    }
+                    if (currentState1 == 8) {
+                        alert('Already Configuration is done for Router.')
+                    }
+                    return;
+                } else {
+
+                    currentState1 = 9;
+                    var outputDiv1 = document.getElementById('output1');
+
+                    outputDiv1.innerHTML += '<p>>Router (config-router) #ip dhcp pool ' + poolName2 + '</p>'; // Output error message
+
+
+                    outputDiv1.innerHTML += '<p>>Router (config-router) #network 192.168.1.0 255.255.255.0</p>'; // Output error message
+
+                    outputDiv1.innerHTML += '<p>>Router (config-router) #default router 192.168.1.1</p>'; // Output error message
+
+                    outputDiv1.innerHTML += '<p>>Router (config-router) #dns-server 8.8.8.8</p>'; // Output error message
+
+                    outputDiv1.innerHTML += '<p>>Router (config-router) #exit</p>'; // Output error message
+
+                    outputDiv1.innerHTML += '<p>>Router (config-router) #ip dhcp pool ' + poolName1 + '</p>'; // Output error message
+
+                    outputDiv1.innerHTML += '<p>>Router (config-router) #network 192.168.2.0 255.255.255.0</p>'; // Output error message
+
+                    outputDiv1.innerHTML += '<p>>Router (config-router) #default-router 192.168.2.1</p>'; // Output error message
+
+                    outputDiv1.innerHTML += '<p>>Router (config-router) #exit</p>'; // Output error message
+
+
+
+
+                }
+            }
 
 
 
@@ -1757,7 +1806,7 @@
             crossorigin="anonymous"></script>
 
 
-            <script src="https://kit.fontawesome.com/ea03fb3bf9.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/ea03fb3bf9.js" crossorigin="anonymous"></script>
 
 
 
