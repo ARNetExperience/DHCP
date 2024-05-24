@@ -1041,7 +1041,7 @@
                     <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
                         data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
                         data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
-                        data-bs-toggle="modal" data-bs-target="#PC1toRouter">
+                        data-bs-toggle="modal" data-bs-target="#PC1toRouterModal">
                         <div class="HotspotAnnotation">Packet</div>
                     </button>
                 </model-viewer>
@@ -1056,7 +1056,7 @@
                     <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
                         data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
                         data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
-                        data-bs-toggle="modal" data-bs-target="#model1toPC2">
+                        data-bs-toggle="modal" data-bs-target="#Laptop1toRouterModal">
                         <div class="HotspotAnnotation">Packet</div>
                     </button>
                 </model-viewer>
@@ -1071,7 +1071,7 @@
                     <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
                         data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
                         data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
-                        data-bs-toggle="modal" data-bs-target="#model1toPC2">
+                        data-bs-toggle="modal" data-bs-target="#PC2toRouterModal">
                         <div class="HotspotAnnotation">Packet</div>
                     </button>
                 </model-viewer>
@@ -1086,12 +1086,93 @@
                     <button class="Hotspot packet-button btn btn-sm" slot="hotspot-2"
                         data-position="-0.003848217995850542m -0.14425149508449575m 0.15079345864210944m"
                         data-normal="0m -2.220446049250313e-16m 1m" data-visibility-attribute="visible"
-                        data-bs-toggle="modal" data-bs-target="#model1toPC2">
+                        data-bs-toggle="modal" data-bs-target="#Laptop2toRouterModal">
                         <div class="HotspotAnnotation">Packet</div>
                     </button>
                 </model-viewer>
 
             </div>
+
+            <div class="modal fade" id="Laptop2toRouterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PDU & OSI
+                                Details</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="Laptop 2 to Router dhcp/1.png" alt="1" id="current-image2">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="Laptop1toRouterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PDU & OSI
+                                Details</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="Laptop 1 to Router dhcp/1.png" alt="1" id="current-image1">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="PC2toRouterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PDU & OSI
+                                Details</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="PC2 to Router dhcp/1.png" alt="1" id="current-image4">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="PC1toRouterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: #000000;">PDU & OSI
+                                Details</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="PC1 to Router dhcp/1.png" alt="1" id="current-image3">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Okay</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
 
         </div>
@@ -1174,6 +1255,79 @@
 
 
         <script>
+
+
+
+            // JavaScript for changing images
+            document.addEventListener("DOMContentLoaded", function () {
+                let currentIndex = 1; // Index of the current image
+                const totalImages = 40; // Total number of images
+                const imageElement = document.getElementById('current-image1');
+
+                function changeImage() {
+                    currentIndex = (currentIndex % totalImages) + 1;
+                    imageElement.src = `Laptop 1 to Router dhcp/${currentIndex}.png`; // Update image src
+                    imageElement.alt = `${currentIndex}`; // Update image alt
+                }
+
+                // Change image every 3 seconds
+                setInterval(changeImage, 3000);
+            });
+
+            // JavaScript for changing images
+            document.addEventListener("DOMContentLoaded", function () {
+                let currentIndex = 1; // Index of the current image
+                const totalImages = 28; // Total number of images
+                const imageElement = document.getElementById('current-image2');
+
+                function changeImage() {
+                    currentIndex = (currentIndex % totalImages) + 1;
+                    imageElement.src = `Laptop 2 to Router dhcp/${currentIndex}.png`; // Update image src
+                    imageElement.alt = `${currentIndex}`; // Update image alt
+                }
+
+                // Change image every 3 seconds
+                setInterval(changeImage, 3000);
+            });
+
+
+            
+
+            // JavaScript for changing images
+            document.addEventListener("DOMContentLoaded", function () {
+                let currentIndex = 1; // Index of the current image
+                const totalImages = 29; // Total number of images
+                const imageElement = document.getElementById('current-image3');
+
+                function changeImage() {
+                    currentIndex = (currentIndex % totalImages) + 1;
+                    imageElement.src = `PC1 to Router dhcp/${currentIndex}.png`; // Update image src
+                    imageElement.alt = `${currentIndex}`; // Update image alt
+                }
+
+                // Change image every 3 seconds
+                setInterval(changeImage, 3000);
+            });
+
+            // JavaScript for changing images
+            document.addEventListener("DOMContentLoaded", function () {
+                let currentIndex = 1; // Index of the current image
+                const totalImages = 28; // Total number of images
+                const imageElement = document.getElementById('current-image4');
+
+                function changeImage() {
+                    currentIndex = (currentIndex % totalImages) + 1;
+                    imageElement.src = `PC2 to Router dhcp/${currentIndex}.png`; // Update image src
+                    imageElement.alt = `${currentIndex}`; // Update image alt
+                }
+
+                // Change image every 3 seconds
+                setInterval(changeImage, 3000);
+            });
+
+
+
+
             var currentState1 = 0;
             var poolName2 = 'My_Pool_1';
             var poolName1 = 'My_Pool_2';
